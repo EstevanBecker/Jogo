@@ -15,6 +15,8 @@ public class Main {
         Jogador j2 = new Jogador(nome2);
 
         System.out.println (j1.retornarNome() + "HP:" + j1.retornarVida() + " x " + j2.retornarNome() + "HP:" + j2.retornarVida());
+
+
     }
 
 }
