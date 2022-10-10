@@ -17,4 +17,8 @@ public class Jogador {
     public int retornarVida() {
         return this.vida;
     }
+
+    public void sofrerDano(int dano){
+        vida = vida - dano;
+    }
 }
