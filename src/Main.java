@@ -20,6 +20,8 @@ public class Main {
         System.out.println (j1.retornarNome() + "HP:" + j1.retornarVida() + " x " + j2.retornarNome() + "HP:" + j2.retornarVida());
 
         batalha.atacar(j1,j2);
+
+
     }
 
 }
