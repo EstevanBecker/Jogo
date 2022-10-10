@@ -1,7 +1,8 @@
 package Jogo;
 
-public class Jogador {
+import java.util.Random;
 
+public class Jogador {
     private String nome;
     int vida;
 
@@ -18,7 +19,18 @@ public class Jogador {
         return this.vida;
     }
 
-    public void sofrerDano(int dano){
-        vida = vida - dano;
+    public void sofrerDano(int dano, Integer chanceAcerto){
+        Random random = new Random();
+        int numeroAleatorio = random.nextInt(10) + 1;
+        System.out.println ("O Numero foi: " + numeroAleatorio);
+        System.out.println ("chanceAcerto é: " + chanceAcerto);
+        if (numeroAleatorio <= chanceAcerto) {
+            vida = vida - dano;
+        }
+        else {
+            System.out.println ("Você errou");
+        }
+
     }
+
 }

@@ -1,9 +1,8 @@
 package Jogo;
-
-import java.util.Scanner;
-
 public class Batalha {
-    Turnos turnos = new Turnos();
+    Jogador j1;
+    Jogador j2;
+    Turnos turnos = new Turnos(j1, j2);
 
     public void atacar(Jogador j1, Jogador j2) {
         do {
@@ -18,6 +17,5 @@ public class Batalha {
             System.out.println("Parabéns " + j1.retornarNome() + " Você ganhou");
         }
     }
-
 }
 
