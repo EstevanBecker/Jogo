@@ -3,10 +3,11 @@ package Jogo;
 import java.util.Scanner;
 
 public class Batalha {
+    Turnos turnos = new Turnos();
 
     public void atacar(Jogador j1, Jogador j2) {
         do {
-            ;
+            turnos.selecionarTurno(j1, j2);
         } while (j1.vida > 0 && j2.vida >0);
             mensagemFinal(j1,j2);
     }
