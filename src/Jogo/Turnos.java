@@ -17,11 +17,11 @@ public class Turnos {
                 int numero = random.nextInt(100);
 
                 if (numero <= 50) {
-                        System.out.println("Parabéns jogador 2, é sua vez");
+                        System.out.println("Parabéns jogador " + j2.retornarNome() + ", é sua vez");
                         selecionarDano(j1); //o 'jogador' que vai atacar não é o que é passado no método.
                         System.out.println (j1.retornarNome() + "HP:" + j1.retornarVida() + " x " + j2.retornarNome() + "HP:" + j2.retornarVida());
                 } else {
-                        System.out.println("Parabéns jogador 1, é sua vez");
+                        System.out.println("Parabéns jogador " + j1.retornarNome() +", é sua vez");
                         selecionarDano(j2); // o 'jogador' que vai atacar não é o que é passado no método;
                         System.out.println (j1.retornarNome() + "HP:" + j1.retornarVida() + " x " + j2.retornarNome() + "HP:" + j2.retornarVida());
                 }
