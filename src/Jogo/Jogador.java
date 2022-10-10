@@ -19,18 +19,20 @@ public class Jogador {
         return this.vida;
     }
 
-    public void sofrerDano(int dano, Integer chanceAcerto){
+    public void sofrerDano(int dano, Integer chanceAcerto, Integer chanceAcertoCritico) {
         Random random = new Random();
         int numeroAleatorio = random.nextInt(10) + 1;
-        System.out.println ("O Numero foi: " + numeroAleatorio);
-        System.out.println ("chanceAcerto é: " + chanceAcerto);
+        int chanceCritico = random.nextInt(10) + 1;
+        System.out.println("O Numero foi: " + numeroAleatorio);
+        System.out.println("chanceAcerto é: " + chanceAcerto);
         if (numeroAleatorio <= chanceAcerto) {
             vida = vida - dano;
-        }
-        else {
-            System.out.println ("Você errou");
+        } else if (chanceCritico <= chanceAcertoCritico) {
+            System.out.println ("Uau, isso foi um acerto critico");
+            vida = vida - dano * 2;
+        } else {
+            System.out.println("Você errou");
         }
 
     }
-
 }

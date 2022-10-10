@@ -33,15 +33,15 @@ public class Turnos {
                         switch (selecionarAtaque) {
                                 case 1 -> {
                                         System.out.println("Você escolheu o ataque fraco");
-                                        jogador.sofrerDano(1,9);
+                                        jogador.sofrerDano(1,9,2);
                                 }
                                 case 2 -> {
                                         System.out.println("Você escolheu o ataque medio");
-                                        jogador.sofrerDano(2,6);
+                                        jogador.sofrerDano(2,6,2);
                                 }
                                 case 3 -> {
                                         System.out.println("Você escolheu o ataque forte");
-                                        jogador.sofrerDano(3,3);
+                                        jogador.sofrerDano(3,3,2);
                                 }
                                 default -> {
                                         System.out.println("Opção invalida");
