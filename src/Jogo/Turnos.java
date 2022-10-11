@@ -15,9 +15,8 @@ public class Turnos {
 
         public void selecionarTurno(Jogador j1, Jogador j2) {
                 Random random = new Random();
-                int numero = random.nextInt(100);
-
-                if (numero <= 50) {
+                int numero = random.nextInt(10);
+                if (numero <= 5) {
                         System.out.println("Parabéns jogador " + j2.retornarNome() + ", é sua vez");
                         selecionarTipoDeAtaque(j1); //o 'jogador' que vai atacar não é o que é passado no método.
                 } else {
