@@ -1,5 +1,8 @@
 import Jogo.Batalha;
 import Jogo.Jogador;
+import Jogo.JogadorHumano;
+import Jogo.Maquina;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,16 +14,18 @@ public class Main {
 
         System.out.println ("Informe o nome do jogador 1: ");
         String nome = meuScanner.nextLine();
-        Jogador j1 = new Jogador(nome);
+        JogadorHumano j1 = new JogadorHumano(nome);
 
         System.out.println ("Informe o nome do jogador 2: ");
         String nome2 = meuScanner.nextLine();
-        Jogador j2 = new Jogador(nome2);
+        Maquina maquina = new Maquina(nome2);
+        System.out.println ("Informe o nome do jogador 2: ");
+        String nome3 = meuScanner.nextLine();
+        JogadorHumano j2 = new JogadorHumano(nome3);
 
-        System.out.println (j1.retornarNome() + "HP:" + j1.retornarVida() + " x " + j2.retornarNome() + "HP:" + j2.retornarVida());
+        System.out.println (j1.retornarNome() + "HP:" + j1.retornarVida() + " x " + maquina.retornarNome() + "HP:" + maquina.retornarVida());
 
-        batalha.atacar(j1,j2);
-
+        batalha.iniciar(j1, j2, maquina);
 
     }
 
