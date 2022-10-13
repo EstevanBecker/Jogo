@@ -22,12 +22,21 @@ public class Maquina implements Jogador {
         Random random = new Random();
         int numeroAleatorio = random.nextInt(10) + 1;
         int chanceCritico = random.nextInt(10) + 1;
-        ataqueMaquina();
+        if (numeroAleatorio <= chanceAcerto) {
+            System.out.println("O Numero foi: " + numeroAleatorio);
+            System.out.println("chanceAcerto é: " + chanceAcerto);
+            vida = vida - dano;
+
+        } else if (chanceCritico <= chanceAcertoCritico) {
+            System.out.println("O Numero foi: " + chanceCritico);
+            System.out.println("a chance de acerto critico é: " + chanceAcertoCritico);
+            System.out.println ("Uau, isso foi um acerto critico");
+            vida = vida - dano * 2;
+        } else {
+            System.out.println("Você errou");
+        }
+
     }
 
-    public int ataqueMaquina () {
-        Random random = new Random();
-        int ataqueMaquina = random.nextInt(3);
-        return ataqueMaquina;
-    }
+
 }

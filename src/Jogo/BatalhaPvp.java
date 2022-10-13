@@ -1,8 +1,8 @@
 package Jogo;
-public class Batalha {
+public class BatalhaPvp {
     JogadorHumano j1;
     JogadorHumano j2;
-    Turnos turnos = new Turnos(j1, j2);
+    Turnos turnos = new Turnos();
 
     public void iniciar(JogadorHumano j1, JogadorHumano j2) {
         do {
