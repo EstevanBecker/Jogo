@@ -19,10 +19,10 @@ public class Turnos {
                 int numero = random.nextInt(10);
                 if (numero <= 5) {
                         System.out.println("Parabéns jogador " + j2.retornarNome() + ", é sua vez");
-                        selecionarAtaqueMaquina(j1); //o 'jogador' que vai atacar não é o que é passado no método.
-                } else {
+                        selecionarAtaque(j1); //o 'jogador' que vai atacar não é o que é passado no método.
+
                         System.out.println("Parabéns jogador " + j1.retornarNome() +", é sua vez");
-                        selecionarAtaqueMaquina(j2); // o 'jogador' que vai atacar não é o que é passado no método;
+                        selecionarAtaque(j2); // o 'jogador' que vai atacar não é o que é passado no método;
                 }
                 System.out.println (j1.retornarNome() + " HP:" + j1.retornarVida() + " x " + j2.retornarNome() + " HP:" + j2.retornarVida());
         }
@@ -51,13 +51,16 @@ public class Turnos {
 
                 }
 
+               public int selecaodeTurnos() {
+                       Random random = new Random();
+                       int numero = random.nextInt(10);
+                       return numero;
+               }
+
         public void selecionarTurnoMaquina(Jogador j1, Jogador maquina) {
-                Random random = new Random();
-                int numero = random.nextInt(10);
-                if (numero <= 5) {
+                if (selecaodeTurnos() <= 5) {
                         System.out.println("Parabéns jogador " + maquina.retornarNome() + ", é sua vez");
                         selecionarAtaqueMaquina(j1); //o 'jogador' que vai atacar não é o que é passado no método.
-                } else {
                         System.out.println("Parabéns jogador " + j1.retornarNome() +", é sua vez");
                         selecionarAtaque(maquina); // o 'jogador' que vai atacar não é o que é passado no método;
                 }

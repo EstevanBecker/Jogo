@@ -13,7 +13,7 @@ public class Main {
 
         System.out.println ("Informe o nome do jogador 1: ");
         String nome = meuScanner.nextLine();
-        JogadorHumano j1 = new JogadorHumano(nome);
+        Jogador j1 = new JogadorHumano(nome);
 
         System.out.println ("Escolha se você deseja jogar com 1 ou 2 players");
         int escolha = meuScanner.nextInt();
@@ -22,10 +22,7 @@ public class Main {
 
             System.out.println("Informe o nome do jogador 2: ");
             String nome2 = meuScanner.nextLine();
-            Maquina maquina = new Maquina(nome2);
-            System.out.println("Informe o nome do jogador 2: ");
-            String nome3 = meuScanner.nextLine();
-            JogadorHumano j2 = new JogadorHumano(nome3);
+            Jogador j2 = new JogadorHumano(nome2);
 
             System.out.println(j1.retornarNome() + "HP:" + j1.retornarVida() + " x " + j2.retornarNome() + "HP:" + j2.retornarVida());
 
